@@ -5,6 +5,10 @@ function love.update(dt)
     end
 
     if love.keyboard.isDown("space") and GameOver.isFail == true then
-        
+        if score > BestScore then
+            BestScore = score
+        end
+        score = 0
+        GameOver.isFail = false
     end
 end
