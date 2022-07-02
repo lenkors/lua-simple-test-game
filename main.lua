@@ -1,7 +1,7 @@
 -- Global variables
-    Title = 'Lua Game Test v0.0.2'
-    Ver = '0.0.2'
-    playerData = ''
+    Title = 'Lua Game Test v0.0.3a'
+    Ver = '0.0.3a'
+    
     fps = love.timer.getFPS()
 
     positionData = {
@@ -34,6 +34,8 @@
         isFail = false,
         isMoreThen100 = false,
     }
+    -- DEBUGER By default start on port 8000
+    LoveBird = require 'packages.lovebird' 
 -- end global variables
 
 -- Main modules
@@ -43,3 +45,7 @@ require 'modules.update'
 
 -- Hooks
 require 'hooks.mouse'
+require 'hooks.countFunc'
+
+-- Controllers
+require 'controllers.Player'

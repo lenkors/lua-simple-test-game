@@ -1,4 +1,5 @@
 function love.update(dt)
+    LoveBird.update()
     if love.keyboard.isDown("up") then
         positionData.up = num + 100 * dt -- это увеличивает num на 100 в секунду
         playerData = dt
