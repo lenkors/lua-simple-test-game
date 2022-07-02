@@ -17,12 +17,19 @@
 
     headerFont = love.graphics.newFont(25)
 
+    -- Btns
     Btn1 = {
         x = 100,
         y = 40,
         size = 25,
     }
 
+    Btn2 = {
+        x = 250,
+        y = 110,
+        size = 20,
+    }
+    -- Btns end 
     GameOver = {
         isFail = false,
         isMoreThen100 = false,

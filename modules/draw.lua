@@ -17,6 +17,10 @@ function love.draw()
     -- Circle
     if GameOver.isFail == false then
         love.graphics.circle('fill', Btn1.x, Btn1.y, Btn1.size, 100)
+        if GameOver.isMoreThen100 == true and GameOver.isFail == false then
+            love.graphics.setColor(119, 128, 191)
+            love.graphics.circle('fill', Btn2.x, Btn2.y, Btn2.size, 100)
+        end
     else
         local gmFont = love.graphics.newFont(40)
         love.graphics.setFont(gmFont)
@@ -28,6 +32,5 @@ function love.draw()
         love.graphics.setFont(contFont)
         love.graphics.print('Press Space to continue', 100, 150)
     end
-
     -- end circle
 end

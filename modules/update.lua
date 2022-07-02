@@ -11,4 +11,12 @@ function love.update(dt)
         score = 0
         GameOver.isFail = false
     end
+
+    if GameOver.isFail == false and score >= 100 then
+        GameOver.isMoreThen100 = true
+    end
+
+    if GameOver.isFail == true and score >= 0 then
+        GameOver.isMoreThen100 = false
+    end
 end
