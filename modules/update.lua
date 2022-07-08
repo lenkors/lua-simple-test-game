@@ -20,4 +20,8 @@ function love.update(dt)
     if GameOver.isFail == true and score >= 0 then
         GameOver.isMoreThen100 = false
     end
+
+    if GameWasStart == true then
+        mainMenuBts[1] = 'Resume Game'
+    end
 end

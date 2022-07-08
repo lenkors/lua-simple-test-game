@@ -16,9 +16,8 @@
 __save game file [path](https://love2d.org/wiki/love.filesystem)__
 ## Little road map
 - [ ] Create Player class (with func add name, set color theme and etc)
-- [x] Create save
-- [ ] Main menu
-- [ ] load game
+- [x] Create save game function
+- [x] Main menu
+- [ ] load game function
 - [ ] Animate background
-- [ ] Create main menu
 - [ ] New game mode

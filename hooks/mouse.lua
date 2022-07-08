@@ -9,6 +9,8 @@ function love.mousepressed( x, y, button, istouch, presses )
             Btn2.x = math.random(Btn2.size, love.graphics.getWidth() - Btn2.size)
             Btn2.y = math.random(Btn2.size, love.graphics.getHeight() - Btn2.size)
             score = score + 1
+        elseif findDistanceBetweenPoints(WindowWidth-10, 0, love.mouse.getX(), love.mouse.getY()) < 120 then
+            GameState = 1
         elseif findDistanceBetweenPoints(menuBtns.saveBtn.x, menuBtns.saveBtn.y, love.mouse.getX(), love.mouse.getY()) < menuBtns.saveBtn.size then
             Player:setSave()
         else

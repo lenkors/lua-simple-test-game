@@ -1,6 +1,10 @@
 -- Global variables
-    Title = 'Lua Game Test v0.0.4'
-    Ver = '0.0.4'
+    Title = 'Simple Lua Game v0.1.0'
+    Ver = '0.1.0'
+
+    GameState = 1
+
+    GameWasStart = false
 
     fps = love.timer.getFPS()
 
@@ -14,6 +18,9 @@
     num = 0
     score = 0
     BestScore = 0
+
+    WindowWidth = 0
+    WindowHeight = 0
 
     headerFont = love.graphics.newFont(25)
 
@@ -57,6 +64,11 @@
     LoveBird = require 'packages.lovebird'
 -- end global variables
 
+-- Game Views
+require 'views.GameMode1'
+require 'views.MainMenu'
+require 'views.GameLoadScreen'
+
 -- Main modules
 require 'modules.load'
 require 'modules.draw'
@@ -65,5 +77,6 @@ require 'modules.update'
 -- Hooks
 require 'hooks.mouse'
 require 'hooks.countFunc'
+require 'hooks.menuBtnsKeyboard'
 
 
