@@ -1,7 +1,7 @@
 -- Global variables
-    Title = 'Lua Game Test v0.0.3a'
-    Ver = '0.0.3a'
-    
+    Title = 'Lua Game Test v0.0.4'
+    Ver = '0.0.4'
+
     fps = love.timer.getFPS()
 
     positionData = {
@@ -34,8 +34,27 @@
         isFail = false,
         isMoreThen100 = false,
     }
+
+    menuBtns = {
+        saveBtn = {
+            x = 500,
+            y = 0,
+            size = 100,
+            title = 'Save'
+        }
+    }
+    -- Global libs
+    require 'packages.Tserial'
+    
+
+    -- Controllers
+    require 'controllers.Player'
+
+    -- TODO: add filed to set user name
+    Player = Player:new('Player', 'First')
+
     -- DEBUGER By default start on port 8000
-    LoveBird = require 'packages.lovebird' 
+    LoveBird = require 'packages.lovebird'
 -- end global variables
 
 -- Main modules
@@ -47,5 +66,4 @@ require 'modules.update'
 require 'hooks.mouse'
 require 'hooks.countFunc'
 
--- Controllers
-require 'controllers.Player'
+

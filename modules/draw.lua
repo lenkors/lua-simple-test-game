@@ -11,8 +11,11 @@ function love.draw()
     love.graphics.setFont(bestScoreF)
     love.graphics.setColor(214, 212, 212)
     love.graphics.print('Best Score: '..BestScore, 200, 0)
-    -- end header
 
+
+    love.graphics.print(menuBtns.saveBtn.title, menuBtns.saveBtn.x, menuBtns.saveBtn.y)
+    -- end header
+    
     -- Circle
     if GameOver.isFail == false then
         love.graphics.circle('fill', Btn1.x, Btn1.y, Btn1.size, 100)
