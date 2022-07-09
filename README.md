@@ -18,6 +18,6 @@ __save game file [path](https://love2d.org/wiki/love.filesystem)__
 - [ ] Create Player class (with func add name, set color theme and etc)
 - [x] Create save game function
 - [x] Main menu
-- [ ] load game function
+- [X] load game function
 - [ ] Animate background
 - [ ] New game mode

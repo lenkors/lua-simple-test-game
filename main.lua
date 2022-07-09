@@ -1,6 +1,6 @@
 -- Global variables
-    Title = 'Simple Lua Game v0.1.0'
-    Ver = '0.1.0'
+    Title = 'Simple Lua Game v0.1.1'
+    Ver = '0.1.1'
 
     GameState = 1
 

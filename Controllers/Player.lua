@@ -5,7 +5,13 @@ function Player:new(fname, lname)
     local obj = {
         firstName = fname,
         lastName = lname,
-        saveInfo = '',
+        saveInfo = {
+            player = {},
+            data = {
+                score = 0,
+                BestScore = 0,
+            }
+        },
     }
 
     local filename = "save.lua"
@@ -17,8 +23,23 @@ function Player:new(fname, lname)
     end
 
     function obj:loadSave()
-        local data = love.filesystem.read(filename)
-        obj.saveInfo = data
+        if love.filesystem.exists(filename) then
+            local loadData = love.filesystem.read(filename)
+            obj.saveInfo = loadstring(loadData)
+            score = obj.saveInfo().data.score
+            BestScore = obj.saveInfo().data.BestScore
+        else
+            obj.saveInfo = {
+                player = {
+                    obj.firstName,
+                    obj.lastName
+                },
+                data = {
+                    score = 0,
+                    BestScore = 0,
+                }
+            }
+        end
     end
 
     function obj:getName()

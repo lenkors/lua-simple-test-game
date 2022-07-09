@@ -2,13 +2,18 @@ function love.keypressed(key, scan_code, is_repeat)
     if GameState == 1 then
       menuKeypressed(key)
     elseif GameState == 4 then
-        backToMenu(key)
+        loadScreenKeypressed(key)
     end
 end
 
-function backToMenu(key) 
+function loadScreenKeypressed(key) 
     if key == "escape" then
         GameState = 1
+    end
+
+    if key == 'return' or key == 'kpenter' then
+      Player:loadSave()
+      GameState = 2
     end
 end
 
