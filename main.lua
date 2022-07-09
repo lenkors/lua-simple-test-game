@@ -50,9 +50,9 @@
             title = 'Save'
         }
     }
+
     -- Global libs
     require 'packages.Tserial'
-    
 
     -- Controllers
     require 'controllers.Player'
