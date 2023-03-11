@@ -1,4 +1,4 @@
-mainMenuBts = {'Play New Game', 'Load Game', 'Exit'}
+mainMenuBts = {'Play New Game', 'Profile', 'Load Game', 'Exit'}
 
 selectedMenuBtn = 1
 font = love.graphics.setNewFont(40)

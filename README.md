@@ -19,5 +19,6 @@ __save game file [path](https://love2d.org/wiki/love.filesystem)__
 - [x] Create save game function
 - [x] Main menu
 - [X] load game function
+- [ ] Advanced load\save game functions
 - [ ] Animate background
 - [ ] New game mode

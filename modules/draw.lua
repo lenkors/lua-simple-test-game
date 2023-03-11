@@ -7,6 +7,8 @@ function love.draw()
         LoadGame()
     elseif GameState == 3 then
         love.event.quit()
+    elseif GameState == 5 then
+        ProfileScreen()
     end
 end
 

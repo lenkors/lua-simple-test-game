@@ -14,7 +14,7 @@
         left = '',
         right = '',
     }
-
+    
     num = 0
     score = 0
     BestScore = 0
@@ -51,8 +51,23 @@
         }
     }
 
+    TextFieldFirstName = "You'r default name is - Player"
+    TextFieldsOptions = {
+        x = 40,
+        y = 40,
+        width = 400,
+        height = 30,
+        active = false,
+        colors = {
+            background = { 0, 0, 0, 155 },
+            text = { 255, 40, 40, 255 }
+        }
+    }
+
+
     -- Global libs
     require 'packages.Tserial'
+    utf8 = require("utf8")
 
     -- Controllers
     require 'controllers.Player'
@@ -68,6 +83,7 @@
 require 'views.GameMode1'
 require 'views.MainMenu'
 require 'views.GameLoadScreen'
+require 'views.UserProfile'
 
 -- Main modules
 require 'modules.load'
@@ -78,5 +94,6 @@ require 'modules.update'
 require 'hooks.mouse'
 require 'hooks.countFunc'
 require 'hooks.menuBtnsKeyboard'
+require 'hooks.inputs'
 
 

@@ -6,6 +6,6 @@ function love.load()
     love.graphics.setFont(f)
     love.graphics.setColor(0,0,0,1)
     love.graphics.setBackgroundColor(0,0,0)
-
+    love.keyboard.setKeyRepeat(true)
     love.window.setTitle(Title)
 end

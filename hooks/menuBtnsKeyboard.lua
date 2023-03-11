@@ -3,10 +3,19 @@ function love.keypressed(key, scan_code, is_repeat)
       menuKeypressed(key)
     elseif GameState == 4 then
         loadScreenKeypressed(key)
+    elseif key == "backspace" then
+      -- get the byte offset to the last UTF-8 character in the string.
+      local byteoffset = utf8.offset(TextFieldFirstName, -1)
+
+      if byteoffset then
+          -- remove the last UTF-8 character.
+          -- string.sub operates on bytes rather than UTF-8 characters, so we couldn't do string.sub(text, 1, -2).
+          TextFieldFirstName = string.sub(TextFieldFirstName, 1, byteoffset - 1)
+      end
     end
 end
 
-function loadScreenKeypressed(key) 
+function loadScreenKeypressed(key)
     if key == "escape" then
         GameState = 1
     end
@@ -52,6 +61,8 @@ function menuKeypressed(key)
     elseif mainMenuBts[selectedMenuBtn] == 'Exit' then
         GameState = 3
         love.event.quit()
+    elseif mainMenuBts[selectedMenuBtn] == 'Profile' then
+      GameState = 5
     end
 
   end
