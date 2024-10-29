@@ -1,6 +1,6 @@
 # If you want to install this
-- First you should be installed in your machine **[Love](https://love2d.org/)**
-- Next step, run command `love PATH_TO_THE_FOLDER` _Love launch methods differ depending on your OS_
+- First, you must have **[Love](https://love2d.org/)** installed on your computer
+- Next, run the `love PATH_TO_THE_FOLDER` _Love startup methods depend on your OS_.
 
 ## Packages and dependencies
 
@@ -19,6 +19,6 @@ __save game file [path](https://love2d.org/wiki/love.filesystem)__
 - [x] Create save game function
 - [x] Main menu
 - [X] load game function
-- [ ] Advanced load\save game functions
+- [X] Advanced load\save game functions
 - [ ] Animate background
 - [ ] New game mode
